@@ -28,7 +28,15 @@ Windows:
 set FLASK_APP="books_app.py"
 ```
 
-## Database initialization
+### Database initialization
 ```
 flask init-db
 ```
+
+### Methods and URI
+* GET '/books' - prints list of all books
+* GET '/books?published_date=1995' - filters books by published year
+* GET '/books?sort=published_date' -  sorts books from the newest published date
+* GET '/books?sort=-published_date' - sortins books from the oldest published date
+* GET 'GET /books/<bookId> ' - prints book with the selected ID
+* POST '/db' - gets data from body {"q": "example_word"}, downloads data set from https://www.googleapis.com/books/v1/volumes?q=example_word and adds it to database
