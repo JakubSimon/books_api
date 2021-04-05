@@ -61,7 +61,7 @@ def selecting_books(published_date='', sort=False):
             book = select_books_from_id(book_id[0])
             list_of_books.append(book)
     else:
-        for book_id in range(1, list_of_results[0][0]):
+        for book_id in range(1, list_of_results[0][0]+1):
             book = select_books_from_id(book_id)
             list_of_books.append(book)
 
